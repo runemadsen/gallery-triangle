@@ -1,20 +1,31 @@
 var r = new Rune({
   container: "#canvas",
-  width: 800,
-  height: 800,
+  width: 700,
+  height: 1000,
   debug: true
 });
 
-r.rect(100, 100, 200, 200)
-  .fill(255, 0, 0)
-  .stroke(0)
-
-r.triangle(400, 50, 400, 400, 650, 50)
-  .fill(0, 255, 0)
-  .stroke(0)
-
-r.ellipse(200, 500, 200, 300)
-  .fill(0, 0, 255)
-  .stroke(false)
-
 r.draw();
+
+var letters = [
+  [1, 0, 1],
+  [0, 1, 0]
+];
+
+for(var i = 0; i < letters.length; i++) {
+
+  var currentLetter = letters[i];
+
+  if(currentLetter[0] == 1) {
+    //r.line()
+  }
+
+  if(currentLetter[1] == 1) {
+    // draw middle lines
+  }
+
+  if(currentLetter[2] == 1) {
+    // draw bottom lines
+  }
+
+}
