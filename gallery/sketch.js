@@ -1,7 +1,7 @@
 var r = new Rune({
   container: "#canvas",
-  width: 800,
-  height: 800,
+  width: $(window).width(),
+  height: $(window).height(),
   debug: true
 });
 
@@ -77,3 +77,22 @@ function drawTriangle() {
 
 drawTriangle();
 setInterval(drawTriangle, 2000);
+
+
+$(window).keypress(function(e) {
+
+  var move = 5;
+  if(e.charCode == 97) {
+    triX -= move;
+  }
+  else if(e.charCode == 100) {
+    triX += move;
+  }
+  else if(e.charCode == 119) {
+    triY -= move;
+  }
+  else if(e.charCode == 115) {
+    triY += move;
+  }
+  drawTriangle();
+});
